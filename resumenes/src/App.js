@@ -3,6 +3,7 @@ import React from 'react';
 import Ingreso from './components/ingreso';
 import Materias from './components/materias';
 import Registro from './components/registro';
+import {useQuery, gql} from '@apollo/client';
 
 
 function App() {
