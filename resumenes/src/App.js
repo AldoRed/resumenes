@@ -17,12 +17,14 @@ query getUsuarios{
 function MostrarUsuarios() {
   const {loading, error, data} = useQuery(GET_USUARIOS);
   if(loading) return (<p>cargando...</p>);
-  if(error) return (<p>error</p>);
+  if(error) return (<p>{error.message}</p>);
+  let final = [];
+  data.getUsuarios.map(obj => {
+    final.push(<li key={obj.id}>{obj.email}</li>)
+  })
   return(
     <ul>
-      data.getUsuarios.map(obj => {
-        <li key={obj.id}>{obj.email}</li>
-      })
+      {final}
     </ul>)
 }
 
