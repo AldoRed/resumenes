@@ -9,6 +9,17 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 })
 
+client.query({
+  query: gql`
+  query getUsuarios{
+    getUsuarios{
+      id 
+      email
+      pass
+    }
+  }`
+}).then((result)=>console.log(result));
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
