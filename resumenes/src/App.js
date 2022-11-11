@@ -1,13 +1,18 @@
 import './App.css';
 import React from 'react';
-import ingreso from './components/ingreso';
-import materias from './components/materias';
-import registro from './components/registro';
+import Ingreso from './components/ingreso';
+import Materias from './components/materias';
+import Registro from './components/registro';
 
 
 function App() {
   return (
-    <h1>Resumenes</h1>
+    
+    <div>
+      <h1>Resumenes</h1>
+      <Materias/>
+    </div>
+    
   );
 }
 
