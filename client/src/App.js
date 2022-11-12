@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import MostrarUsuarios from './components/userList';
-
+import AddUser from './components/registro';
 import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
 
 // para q esto funcione: entrar al directorio server/ y correr 'nodemon app', luego volver 
