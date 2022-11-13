@@ -1,8 +1,9 @@
 import './App.css';
 import React from 'react';
 import MostrarUsuarios from './components/userList';
-import AddUser from './components/registro';
+import Navbar from './components/navbar';
 import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
+import Ingreso from './components/ingreso';
 
 // para q esto funcione: entrar al directorio server/ y correr 'nodemon app', luego volver 
 // al directorio client y correr 'npm start'
@@ -17,8 +18,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
     <div>
-      <h1>Resumenes</h1>
-      <MostrarUsuarios></MostrarUsuarios>
+      <Navbar />
+      <Ingreso />
+      <MostrarUsuarios />
     </div>
     </ApolloProvider>
   );

@@ -4,7 +4,9 @@ export default class Materias extends Component{
 
     render(){
         return (
-            <p>Materias</p>
+            <div>
+                Materias
+            </div>
         )
     }
 }
