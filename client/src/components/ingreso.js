@@ -3,6 +3,14 @@ import React, { Component } from 'react'
 export class Ingreso extends Component {
   render() {
     return (
+      <div>
+         <div className="container">
+            <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+              <a href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                RESUMENES UAI
+              </a>
+            </header>  
+          </div>
 <section class="vh-100 gradient-custom">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -38,8 +46,10 @@ export class Ingreso extends Component {
     </div>
   </div>
 </section>
+</div>
     )
   }
 }
+
 
 export default Ingreso
