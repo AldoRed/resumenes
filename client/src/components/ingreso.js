@@ -25,9 +25,9 @@ export class Ingreso extends Component {
 
               <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">¿Olvidaste tu contraseña?</a></p>
                 <div class="container">
-                  <a href="#" class="btn btn-primary btn-lg px-5">Iniciar Sesión</a>
+                  <a href="#" class="btn btn-primary btn-lg mx-3">Iniciar Sesión</a>
 
-                  <a href="#" class="btn bg-white fg-dark btn-lg px-5">Registrarse</a>
+                  <a href="#" class="btn bg-white fg-dark btn-lg mx-3">Registrarse</a>
                 </div> 
 
             </div>
