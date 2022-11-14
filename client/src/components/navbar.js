@@ -17,7 +17,6 @@ export class Navbar extends Component {
               <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="#" className="nav-link px-2 link-secondary">INICIO</a></li>
                 <li><a href="#" className="nav-link px-2 link-dark">ASIGNATURAS</a></li>
-                <li><a href="/subida" className="nav-link px-2 link-dark">Subir Archivo</a></li>
               </ul>
         
               <div className="col-md-3 text-end">
