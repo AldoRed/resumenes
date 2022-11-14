@@ -33,6 +33,7 @@ function App() {
             <Route path='/ingreso' element={
               <>
               <Ingreso/>
+              <Footer/>
               </>
             }/>
         </Routes>
