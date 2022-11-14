@@ -21,7 +21,7 @@ export class Navbar extends Component {
         
               <div className="col-md-3 text-end">
                 <button type="button" className="btn btn-outline-primary me-2">Iniciar Sesión</button>
-                <button type="button" className="btn btn-primary">Registro</button>
+                <a type="button" className="btn btn-primary" href='/registro'>Registro</a>
               </div>
             </header>
           </div>
