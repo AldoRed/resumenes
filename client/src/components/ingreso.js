@@ -11,23 +11,40 @@ function Ingreso() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Ingreso
-      </Button>
+      <a variant="primary" type='button' className='btn btn-outline-primary me-2' onClick={handleShow}>
+        Iniciar Sesión
+      </a>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Inicia Sesión</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
+        <Modal.Body>
+      <div class="">
+        <div class="card bg-white text-dark">
+          <div class="card-body p-5 text-center">
+
+            <div class="mb-md-5 mt-md-4 pb-5">
+
+              <div class="form-outline form-white mb-4">
+                <label class="form-label" for="typeEmailX">Email</label>
+                <input type="email" id="typeEmailX" class="form-control form-control-lg" placeholder='ejemplo@alumnos.uai.cl'/>
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <label class="form-label" for="typePasswordX">Password</label>
+                <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+              </div>
+
+              <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+
+              <button class="btn btn-outline-dark btn-lg mx-1" type="submit">Iniciar Sesión</button>
+              <button class="btn btn-outline-dark btn-lg mx-1" type="submit">Registrarse</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        </Modal.Body>
       </Modal>
     </>
   );
