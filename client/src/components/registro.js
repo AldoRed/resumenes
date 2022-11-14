@@ -3,7 +3,7 @@ import { useState } from "react";
 import { addUserMutation } from "../queries/queries";
 
 // Agrega un usuario: 
-const AddUser =() =>{
+const Registro =() =>{
     const [addTodo, { data, loading, error }] = useMutation(addUserMutation);
 
 
@@ -44,4 +44,4 @@ const AddUser =() =>{
     )
 
 }
-export default AddUser;
+export default Registro;
