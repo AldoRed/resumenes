@@ -10,4 +10,14 @@ mutation AddUser($username: String!, $email: String!, $password: String!) {
 }
 `;
 
-export {addUserMutation};
+const getUsersQuery = gql`
+{
+  users {
+    id
+    username
+    email
+  }
+}`;
+
+
+export {addUserMutation, getUsersQuery};

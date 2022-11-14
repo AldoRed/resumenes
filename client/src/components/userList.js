@@ -1,13 +1,5 @@
-import {useQuery ,gql} from '@apollo/client'
-
-const getUsersQuery = gql`
-{
-  users {
-    id
-    username
-    email
-  }
-}`;
+import {useQuery} from '@apollo/client'
+import { getUsersQuery } from '../queries/queries';
 
 function MostrarUsuarios() {
     const {loading, error, data} = useQuery(getUsersQuery);
