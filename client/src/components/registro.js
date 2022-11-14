@@ -28,6 +28,7 @@ const Registro =() =>{
             }
         })
         console.log(username, password, email);
+        handleClose();
     }
     return (
         <>
@@ -48,17 +49,17 @@ const Registro =() =>{
     
                   <div class="form-outline form-white mb-4">
                     <label class="form-label" for="typeEmailX">Nombre de usuario</label>
-                    <input type="email" id="typeEmailX" class="form-control form-control-lg" placeholder='Usuario' value={username} onChange={e => setUsername(e.target.value)}/>
+                    <input type="text" class="form-control form-control-lg" placeholder='Usuario' value={username} onChange={e => setUsername(e.target.value)} required/>
                   </div>
     
                   <div class="form-outline form-white mb-4">
                     <label class="form-label" for="typeEmailX">Email</label>
-                    <input type="email" id="typeEmailX" class="form-control form-control-lg" placeholder='ejemplo@alumnos.uai.cl' value={email} onChange={e => setEmail(e.target.value)}/>
+                    <input type="email" id="typeEmailX" class="form-control form-control-lg" placeholder='ejemplo@alumnos.uai.cl' value={email} onChange={e => setEmail(e.target.value)} required/>
                   </div>
 
                   <div class="form-outline form-white mb-4">
                     <label class="form-label" for="typePasswordX">Constraseña</label>
-                    <input type="password" id="typePasswordX" class="form-control form-control-lg" value={password} onChange={e => setPassword(e.target.value)}/>
+                    <input type="password" id="typePasswordX" class="form-control form-control-lg" value={password} onChange={e => setPassword(e.target.value)} required/>
                   </div>
         
                   <button class="btn btn-outline-dark btn-lg mx-1" type="submit">Registrarse</button>
