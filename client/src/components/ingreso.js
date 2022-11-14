@@ -14,13 +14,11 @@ export class Ingreso extends Component {
 
               <h2 class="fw-bold mb-2 text-uppercase">Bienvenid@ a Resúmenes UAI</h2><br/>
               <div class="form-outline form-white mb-4">
-                <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                <label class="form-label" for="typeEmailX">Email</label>
+                <input type="email" id="typeEmailX" placeholder='Usuario' class="form-control form-control-lg" />
               </div>
 
               <div class="form-outline form-white mb-4">
-                <input type="password" id="typePasswordX" class="form-control form-control-lg" />
-                <label class="form-label" for="typePasswordX">Contraseña</label>
+                <input type="password" id="typePasswordX" placeholder='Contraseña' class="form-control form-control-lg" />
               </div>
 
               <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">¿Olvidaste tu contraseña?</a></p>
