@@ -13,7 +13,7 @@ export class Footer extends Component {
         <footer className="bg-light text-center text-lg-start">
             
             <div className="text-center p-3">
-            © {date()} Copyright chupalo 
+            © {date()} Copyright  
                 <a className="text-dark" > resumenes.uai.cl</a>
             </div>
             
