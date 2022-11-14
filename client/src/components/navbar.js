@@ -20,7 +20,7 @@ export class Navbar extends Component {
               </ul>
         
               <div className="col-md-3 text-end">
-                <button type="button" className="btn btn-outline-primary me-2">Iniciar Sesión</button>
+                <a type="button" className="btn btn-outline-primary me-2" href='/ingreso'>Iniciar Sesión</a>
                 <a type="button" className="btn btn-primary" href='/registro'>Registro</a>
               </div>
             </header>

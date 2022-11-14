@@ -26,11 +26,15 @@ function App() {
             <Route exact path='/' element={
               <>
             <Navbar/>
-            <Ingreso/>
             <Footer/>
               </>
             } />
             <Route path='/registro' element={<Registro/>}/>
+            <Route path='/ingreso' element={
+              <>
+              <Ingreso/>
+              </>
+            }/>
         </Routes>
       </Router>
     </div>
