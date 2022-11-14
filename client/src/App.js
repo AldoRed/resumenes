@@ -4,6 +4,7 @@ import MostrarUsuarios from './components/userList';
 import Navbar from './components/navbar';
 import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
 import Ingreso from './components/ingreso';
+import Footer from './components/footer';
 
 // para q esto funcione: entrar al directorio server/ y correr 'nodemon app', luego volver 
 // al directorio client y correr 'npm start'
@@ -21,6 +22,7 @@ function App() {
       <Navbar />
       <Ingreso />
       <MostrarUsuarios />
+      <Footer />
     </div>
     </ApolloProvider>
   );

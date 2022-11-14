@@ -31,3 +31,7 @@
 .card img{
     height: 250px;
 }
+
+footer{
+    background-color: rgba(0, 0, 0, 0.2);
+}
