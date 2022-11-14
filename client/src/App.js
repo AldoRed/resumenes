@@ -29,10 +29,6 @@ function App() {
             <Footer/>
               </>
             } />
-            <Route path='/registro' element={<Registro/>}/>
-            <Route path='/ingreso' element={
-              <Ingreso/>
-            }/>
         </Routes>
       </Router>
     </div>

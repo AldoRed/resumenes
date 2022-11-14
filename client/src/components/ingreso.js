@@ -11,7 +11,7 @@ function Ingreso() {
 
   return (
     <>
-      <a variant="primary" type='button' className='btn btn-outline-primary me-2' onClick={handleShow}>
+      <a variant="primary" type='button' className='btn btn-primary me-2' onClick={handleShow}>
         Iniciar Sesión
       </a>
 
@@ -39,7 +39,6 @@ function Ingreso() {
               <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
 
               <button class="btn btn-outline-dark btn-lg mx-1" type="submit">Iniciar Sesión</button>
-              <button class="btn btn-outline-dark btn-lg mx-1" type="submit">Registrarse</button>
             </div>
           </div>
         </div>

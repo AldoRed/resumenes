@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Ingreso from './ingreso'
+import Registro from './registro'
 
 export class Navbar extends Component {
   
@@ -22,7 +23,7 @@ export class Navbar extends Component {
         
               <div className="col-md-3 text-end">
                 <Ingreso></Ingreso>
-                <a type="button" className="btn btn-primary" href='/registro'>Registro</a>
+                <Registro></Registro>
               </div>
             </header>
           </div>
