@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 // Todo: arreglar el boton Registrarse para q on hover sea vea bien
@@ -11,9 +10,9 @@ function Ingreso() {
 
   return (
     <>
-      <a variant="primary" type='button' className='btn btn-primary me-2' onClick={handleShow}>
+      <button variant="primary" type='button' className='btn btn-primary me-2' onClick={handleShow}>
         Iniciar Sesión
-      </a>
+      </button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
