@@ -28,7 +28,9 @@ export class Navbar extends Component {
             </header>
           </div>
           <div className="coverPrincipal">
-            <button type="button" className='btn btn-default'>Explorar Materias</button>
+
+             <a class="btn mx-6 btn-primary" href="/asignaturas">Explorar Materias</a>
+
           </div>
 
           <div className='destacados container'>
