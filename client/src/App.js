@@ -30,7 +30,12 @@ function App() {
             <Footer/>
               </>
             } />
-            <Route path='/asignaturas' element={<Materias></Materias>}/>
+            <Route path='/asignaturas' element={
+              <>
+              <Materias/>
+              <Footer/>
+              </>
+            }/>
         </Routes>
       </Router>
     </div>

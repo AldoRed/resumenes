@@ -44,8 +44,8 @@ footer{
     margin-top:-3%;
 }
 
-.asignaturas{
-    margin:30px 0 ;
+.semestres{
+    margin:10px 0 ;
     text-align: center;
 }
 
@@ -54,4 +54,17 @@ footer{
     height: 500px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.coverAsignaturas{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    background-color: #1E1E1E;
+    background-position: center;    
+}
+.coverAsignaturas h2{
+    text-align: center;  
+    color: white;  
 }
