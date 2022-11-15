@@ -1,7 +1,6 @@
 import { useMutation } from "@apollo/client";
 import { useState } from "react";
 import { addUserMutation } from "../queries/queries";
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 // Agrega un usuario: 
@@ -27,14 +26,14 @@ const Registro =() =>{
                 email: email
             }
         })
-        console.log(username, password, email);
+        console.log(data);
         handleClose();
     }
     return (
         <>
-          <a variant="primary" type='button' className='btn btn-outline-primary me-2' onClick={handleShow}>
+          <button variant="primary" type='button' className='btn btn-outline-primary me-2' onClick={handleShow}>
             Registrarse
-          </a>
+          </button>
     
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>

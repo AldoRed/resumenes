@@ -1,12 +1,9 @@
 import './App.css';
 import React from 'react';
-import MostrarUsuarios from './components/userList';
 import Navbar from './components/navbar';
 import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
-import Ingreso from './components/ingreso';
 import Footer from './components/footer';
-import Registro from './components/registro';
 import Materias from './components/materias';
 
 // para q esto funcione: entrar al directorio server/ y correr 'nodemon app', luego volver 
@@ -30,7 +27,12 @@ function App() {
             <Footer/>
               </>
             } />
-            <Route path='/asignaturas' element={<Materias></Materias>}/>
+            <Route path='/asignaturas' element={
+              <>
+              <Materias/>
+              <Footer/>
+              </>
+            }/>
         </Routes>
       </Router>
     </div>
