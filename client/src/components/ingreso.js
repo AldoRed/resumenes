@@ -31,11 +31,11 @@ function Ingreso() {
               </div>
 
               <div class="form-outline form-white mb-4">
-                <label class="form-label" for="typePasswordX">Password</label>
-                <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+                <label class="form-label" for="typePasswordX">Constraseña</label>
+                <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder='Contraseña' />
               </div>
 
-              <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+              <p class="small mb-5 pb-lg-2"><a class="text-black-50" href="#!">¿Olvidaste tu constraseña?</a></p>
 
               <button class="btn btn-outline-dark btn-lg mx-1" type="submit">Iniciar Sesión</button>
             </div>

@@ -5,6 +5,7 @@ import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Footer from './components/footer';
 import Materias from './components/materias';
+import Subida from './components/subida';
 
 // para q esto funcione: entrar al directorio server/ y correr 'nodemon app', luego volver 
 // al directorio client y correr 'npm start'
@@ -30,6 +31,12 @@ function App() {
             <Route path='/asignaturas' element={
               <>
               <Materias/>
+              <Footer/>
+              </>
+            }/>
+            <Route path='/subida' element={
+              <>
+              <Subida/>
               <Footer/>
               </>
             }/>
