@@ -43,3 +43,15 @@ footer{
 .loginSection {
     margin-top:-3%;
 }
+
+.asignaturas{
+    margin:30px 0 ;
+    text-align: center;
+}
+
+.Carrusel{
+    width: 75%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}

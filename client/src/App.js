@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Ingreso from './components/ingreso';
 import Footer from './components/footer';
 import Registro from './components/registro';
+import Materias from './components/materias';
 
 // para q esto funcione: entrar al directorio server/ y correr 'nodemon app', luego volver 
 // al directorio client y correr 'npm start'
@@ -29,6 +30,7 @@ function App() {
             <Footer/>
               </>
             } />
+            <Route path='/asignaturas' element={<Materias></Materias>}/>
         </Routes>
       </Router>
     </div>
