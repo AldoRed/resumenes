@@ -1,39 +1,43 @@
-import React, { Component } from "react"
+import React from "react"
 import Ingreso from './ingreso'
 import Registro from './registro'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { useMutation } from "@apollo/client";
+import { addResumenMutation } from '../queries/queries';
+
+const Materias = () => {
+
+    const [addTodo, { data, loading, error }] = useMutation(addResumenMutation);
 
 
-export default class Materias extends Component{
 
-    render(){
-        return (
-            <div>
-                <div className="container">
-                    <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-                        <a href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-                            RESUMENES UAI
-                        </a>
-                    
-                        <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                            <li><a href="/" className="nav-link px-2 link-secondary">INICIO</a></li>
-                            <li><a href="/asignaturas" className="nav-link px-2 link-dark">ASIGNATURAS</a></li>
-                            <li><a href="/subida" className="nav-link px-2 link-dark">SUBIR ARCHIVO</a></li>
-                        </ul>
-                    
-                        <div className="col-md-3 text-end">
-                            <Ingreso></Ingreso>
-                            <Registro></Registro>
-                        </div>
-                    </header>
-                </div>
-                <div className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                        <h1>Sube tu archivo</h1>
-                </div>
-                <div className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+    return (
+        <div>
+            <div className="container">
+                <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+                    <a href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                        RESUMENES UAI
+                    </a>
 
-                    <Form>
+                    <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="/" className="nav-link px-2 link-secondary">INICIO</a></li>
+                        <li><a href="/asignaturas" className="nav-link px-2 link-dark">ASIGNATURAS</a></li>
+                        <li><a href="/subida" className="nav-link px-2 link-dark">SUBIR ARCHIVO</a></li>
+                    </ul>
+
+                    <div className="col-md-3 text-end">
+                        <Ingreso></Ingreso>
+                        <Registro></Registro>
+                    </div>
+                </header>
+            </div>
+            <div className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <h1>Sube tu archivo</h1>
+            </div>
+            <div className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+
+                <Form>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Titulo de tu resumen</Form.Label>
                         <Form.Control type="text" placeholder="Titulo" />
@@ -62,10 +66,12 @@ export default class Materias extends Component{
                     <Button variant="primary" type="submit">
                         Subir Archivo
                     </Button>
-                    </Form>
-                </div>
+                </Form>
             </div>
-            
-        )
-    }
+        </div>
+
+    )
+
 }
+
+export default Materias;

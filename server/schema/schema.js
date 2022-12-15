@@ -15,11 +15,11 @@ const {
 
 // creamos un object type BookType
 const ResumenType = new GraphQLObjectType({
-    name:'Resumen',
+    name: 'Resumen',
     fields: () => ({
-        id: {type: GraphQLID},
-        name: {type: GraphQLString},
-        content: {type: GraphQLString},
+        id: { type: GraphQLID },
+        name: { type: GraphQLString },
+        content: { type: GraphQLString },
         user: {
             type: UserType,
             resolve(parent, args) {
@@ -30,29 +30,29 @@ const ResumenType = new GraphQLObjectType({
 });
 
 const UserType = new GraphQLObjectType({
-    name:'User',
+    name: 'User',
     fields: () => ({
-        id: {type: GraphQLID},
-        username: {type: GraphQLString},
-        email: {type: GraphQLString},
-        password: {type: GraphQLString},
+        id: { type: GraphQLID },
+        username: { type: GraphQLString },
+        email: { type: GraphQLString },
+        password: { type: GraphQLString },
         resumenes: {
             type: new GraphQLList(ResumenType),
             resolve(parent, args) {
-                return Resumen.find({userId: parent.id});
+                return Resumen.find({ userId: parent.id });
             }
         }
     })
-}); 
+});
 
 // RootQuery: como entramos al grafo
 const RootQuery = new GraphQLObjectType({
-    name : 'RootQueryType',
+    name: 'RootQueryType',
     fields: {
         // Query para obtener un objeto de tipo BookType a partir de su id
         resumen: {
             type: ResumenType,
-            args: { id: {type: GraphQLID}},
+            args: { id: { type: GraphQLID } },
             resolve(parent, args) {
                 return Resumen.findById(args.id);
                 //code to get data from db / other source
@@ -60,7 +60,7 @@ const RootQuery = new GraphQLObjectType({
         },
         user: {
             type: UserType,
-            args: {id: {type: GraphQLID}},
+            args: { id: { type: GraphQLID } },
             resolve(parent, args) {
                 return User.findById(args.id);
             }
@@ -86,9 +86,9 @@ const Mutation = new GraphQLObjectType({
         addUser: {
             type: UserType,
             args: {
-                username: {type: new GraphQLNonNull(GraphQLString)},
-                email: {type: new GraphQLNonNull(GraphQLString)},
-                password: {type: new GraphQLNonNull(GraphQLString)}
+                username: { type: new GraphQLNonNull(GraphQLString) },
+                email: { type: new GraphQLNonNull(GraphQLString) },
+                password: { type: new GraphQLNonNull(GraphQLString) }
             },
             resolve(parent, args) {
                 let user = new User({
@@ -102,13 +102,19 @@ const Mutation = new GraphQLObjectType({
         addResumen: {
             type: ResumenType,
             args: {
-                name: {type: new GraphQLNonNull(GraphQLString)},
-                content: {type: new GraphQLNonNull(GraphQLString)},
-                userId: {type: new GraphQLNonNull(GraphQLID)}
+                name: { type: new GraphQLNonNull(GraphQLString) },
+                asignatura: { type: new GraphQLNonNull(GraphQLString) },
+                tema: { type: new GraphQLNonNull(GraphQLString) },
+                descripcion: { type: new GraphQLNonNull(GraphQLString) },
+                content: { type: new GraphQLNonNull(GraphQLString) },
+                userId: { type: new GraphQLNonNull(GraphQLID) }
             },
             resolve(parent, args) {
                 let resumen = new Resumen({
                     name: args.name,
+                    asignatura: args.asignatura,
+                    tema: args.tema,
+                    descripcion: args.descripcion,
                     content: args.content,
                     userId: args.userId
                 });
