@@ -61,7 +61,7 @@ const Registro = () => {
                                         <input type="password" id="typePasswordX" className="form-control form-control-lg" value={password} onChange={e => setPassword(e.target.value)} required />
                                     </div>
 
-                                    <button className="btn btn-outline-dark btn-lg mx-1" type="submit">Registrarse</button>
+                                    <button className="btn btn-outline-dark btn-lg mx-1" type="submit" onClick={handleSubmit}>Registrarse</button>
                                 </div>
                             </div>
                         </div>
